@@ -19,9 +19,6 @@ html,body{margin:0;width:100%;background:#f8fafc;color:#111;font:18px/1.65 -appl
 .note{background:#f8fafc;border:1px solid #0f172a;border-left:4px solid #0f172a;padding:12px 14px;font-size:15px;color:#0f172a;margin:0 0 12px}
 h2{font-size:22px;color:#0f172a;border-bottom:2px solid #0f172a;padding-bottom:6px;margin:22px 0 10px}
 h3{font-size:18px;color:#0f172a;margin:16px 0 8px}
-table{border-collapse:collapse;width:100%}
-th{background:#eef2ff;color:#0f172a;padding:9px 8px;font-size:14px;text-align:left}
-td{padding:9px 8px;font-size:16px;border-bottom:1px solid #eef2ff;vertical-align:top;color:#0f172a;word-break:break-word}
 .r{background:#fef3f2}
 .g{background:#ecfdf3}
 .n{background:#f8fafc}
@@ -30,6 +27,18 @@ td{padding:9px 8px;font-size:16px;border-bottom:1px solid #eef2ff;vertical-align
 .foot{color:#0f172a;font-size:14px;padding:14px 28px;background:#f8fafc}
 .cap{font-size:15px;color:#0f172a;margin:0 0 8px}
 .tiny{font-size:15px;color:#0f172a}
+table{border-collapse:collapse;width:100%;table-layout:auto}
+th{background:#eef2ff;color:#0f172a;padding:9px 8px;font-size:14px;text-align:left;vertical-align:bottom}
+td{padding:9px 8px;font-size:16px;border-bottom:1px solid #eef2ff;vertical-align:top;color:#0f172a}
+th,td{word-break:keep-all;overflow-wrap:normal;hyphens:none}
+th:not(:last-child),td:not(:last-child){white-space:nowrap;width:1%}
+th:first-child,td:first-child{white-space:nowrap;width:1%;font-variant-numeric:tabular-nums}
+th:last-child,td:last-child{white-space:normal;overflow-wrap:break-word;width:auto}
+table:has(th:nth-child(4)) th:last-child,
+table:has(th:nth-child(4)) td:last-child,
+table:has(td:nth-child(4):last-child) td:last-child{max-width:30em}
+@media (max-width:800px){
+}
 @media (max-width:800px){
 html,body{font-size:16px}
 .sitebar-inner{padding:10px 14px;font-size:14px;gap:8px}
@@ -38,7 +47,6 @@ html,body{font-size:16px}
 .hero h1{font-size:22px}
 .pad,.foot{padding:8px 14px}
 td,th{padding:7px 6px}
-td{font-size:15px}
 }
 </style>
 </head>
