@@ -28,18 +28,24 @@ h3{font-size:18px;color:#0f172a;margin:16px 0 8px}
 .foot{color:#0f172a;font-size:14px;padding:14px 28px;background:#f8fafc}
 .cap{font-size:15px;color:#0f172a;margin:0 0 8px}
 .tiny{font-size:15px;color:#0f172a}
-table{border-collapse:collapse;width:100%;table-layout:auto}
-th{background:#eef2ff;color:#0f172a;padding:9px 8px;font-size:14px;text-align:left;vertical-align:bottom}
-td{padding:9px 8px;font-size:16px;border-bottom:1px solid #eef2ff;vertical-align:top;color:#0f172a}
-th,td{word-break:keep-all;overflow-wrap:normal;hyphens:none}
-th:not(:last-child),td:not(:last-child){white-space:nowrap;width:1%}
-th:first-child,td:first-child{white-space:nowrap;width:1%;font-variant-numeric:tabular-nums}
-th:last-child,td:last-child{white-space:normal;overflow-wrap:break-word;width:auto}
-table:has(th:nth-child(4)) th:last-child,
-table:has(th:nth-child(4)) td:last-child,
-table:has(td:nth-child(4):last-child) td:last-child{max-width:30em}
-@media (max-width:800px){
+.pad table{border-collapse:collapse;width:100%;table-layout:auto}
+.pad th{background:#eef2ff;color:#0f172a;padding:9px 10px;font-size:14px;text-align:left;vertical-align:bottom}
+.pad td{padding:9px 10px;font-size:16px;border-bottom:1px solid #eef2ff;vertical-align:top;color:#0f172a}
+.pad th,.pad td{word-break:keep-all;overflow-wrap:normal;hyphens:none}
+.pad th:first-child,.pad td:first-child,.pad .lbl{
+  white-space:nowrap !important;
+  width:auto;
+  min-width:max-content;
+  font-variant-numeric:tabular-nums;
 }
+.pad th:not(:last-child),.pad td:not(:last-child){
+  white-space:nowrap !important;
+  width:auto;
+  min-width:max-content;
+}
+.pad th:last-child,.pad td:last-child{white-space:normal;overflow-wrap:break-word;width:auto}
+.pad table:has(th:nth-child(4)) th:last-child,
+.pad table:has(th:nth-child(4)) td:last-child{max-width:32em}
 @media (max-width:800px){
 html,body{font-size:16px}
 .sitebar-inner{padding:10px 14px;font-size:14px;gap:8px}
@@ -47,7 +53,8 @@ html,body{font-size:16px}
 .hero{padding:16px 14px}
 .hero h1{font-size:22px}
 .pad,.foot{padding:8px 14px}
-td,th{padding:7px 6px}
+.pad td,.pad th{padding:7px 8px}
+.pad th:first-child,.pad td:first-child,.pad th:not(:last-child),.pad td:not(:last-child){white-space:nowrap !important;min-width:max-content}
 }
 </style>
 </head>
@@ -64,12 +71,12 @@ td,th{padding:7px 6px}
 <h2>0. 封面五问</h2>
 <p class="cap">收工对照。</p>
 <table>
-<tr><th>问</th><th>周三 20:00 ET 作答</th></tr>
-<tr><td class="b"><b>状态</b></td><td class="n">四天来第一根阳（AP）。SPX <b>7707.98 +0.21%</b>；DJI 新闻 <b>53463.05 +0.22%</b>；Nasdaq Comp <b>26331.09 +0.16%</b>；NDX <b>29426.02 −0.22%</b>；RUT <b>3032.94 +0.50%</b>。SPY <b>769.06 +0.21%</b>；QQQ <b>716.08 −0.20%</b>；SMH <b>560.92 −1.55%</b>。VIX <b>14.89</b>（−6.00%，高 15.95 / 低 14.77）。30Y CMT <b>5.19</b>（−9 bp），盘中未到 5.4%。RSP <b>+1.04%</b> 打赢 SPY；IVE <b>+0.74%</b> vs IVW <b>−0.25%</b>。</td></tr>
-<tr><td class="b"><b>钱流向哪</b></td><td class="n">入：XLV <b>+3.51%</b>（MRNA <b>+176.97%</b> / MRK <b>+12.60%</b> / BNTX <b>+21.96%</b> / XBI <b>+5.90%</b> / LLY <b>+4.46%</b>）、XLY <b>+1.92%</b>、XLB <b>+1.43%</b>、XLP <b>+1.12%</b>、RSP <b>+1.04%</b>、IVE <b>+0.74%</b>、TSLA <b>+4.23%</b>、AMZN <b>+2.46%</b>、AAPL <b>+2.19%</b>、EL <b>+16.30%</b>、MRVL <b>+9.85%</b>、TGT <b>+4.28%</b>、LOW <b>+2.02%</b>、HD 残留 <b>+2.02%</b>。出：XLK <b>−1.07%</b>、SOXX <b>−2.21%</b>、SOX <b>−2.12%</b>、SMH <b>−1.55%</b>、AVGO <b>−4.61%</b>、TJX <b>−4.21%</b>、FN 残留 <b>−5.81%</b>、JPM <b>−1.65%</b>、XLF <b>−0.62%</b>、XLI <b>−0.88%</b>、NVDA <b>−0.99%</b>。</td></tr>
-<tr><td class="b"><b>为什么</b></td><td class="n">08:30 财政部把 10s–30s 流动性回购上限 $2bn → <b>≥$4bn</b>（9 Sep–4 Nov）。长端先动：30Y <b>−9 bp</b>，10Y <b>−6 bp</b>，DXY 约 <b>−0.8%</b>。现金里等权 / 价值 / 医疗翻红；铲子（SMH / AVGO）继续漏。14:00 纪要 <b>9-3 已是已知</b>，没把 9 月加息从约 32–33% 抬上去（20:45 ET <b>30.6%</b>）。EIA +4.405 mb 没主导收盘。MRNA Phase 3 是医疗独立腿。</td></tr>
-<tr><td class="b"><b>已计价</b></td><td class="n">9-3 / 三张加息反对票；30Y 离开 5.28–5.29 且未到 5.4%；TGT 超 + 上修、LOW 超但指引收到旧区间地板；MRNA 现金 +177%；回购宣布本身。Sep 加息晚间 <b>30.6%</b> / 按兵 <b>69.4%</b>（Investing.com CME，20:45 ET）。</td></tr>
-<tr><td class="b"><b>证伪</b></td><td class="n">基准错＝周四现金跌出 Barchart DTE2 下沿（SPY <b>764.95</b> / QQQ <b>709.54</b> / SMH <b>550.85</b>）或 30Y 收回 ≥5.28。上行错＝SMH 不能守住 560 / 更不能收回 DTE2 上沿 <b>570.99</b>；或 WMT 系统性砸消费。</td></tr>
+<tr><th class="lbl">问</th><th>周三 20:00 ET 作答</th></tr>
+<tr><td class="b lbl"><b>状态</b></td><td class="n">四天来第一根阳（AP）。SPX <b>7707.98 +0.21%</b>；DJI 新闻 <b>53463.05 +0.22%</b>；Nasdaq Comp <b>26331.09 +0.16%</b>；NDX <b>29426.02 −0.22%</b>；RUT <b>3032.94 +0.50%</b>。SPY <b>769.06 +0.21%</b>；QQQ <b>716.08 −0.20%</b>；SMH <b>560.92 −1.55%</b>。VIX <b>14.89</b>（−6.00%，高 15.95 / 低 14.77）。30Y CMT <b>5.19</b>（−9 bp），盘中未到 5.4%。RSP <b>+1.04%</b> 打赢 SPY；IVE <b>+0.74%</b> vs IVW <b>−0.25%</b>。</td></tr>
+<tr><td class="b lbl"><b>钱流向哪</b></td><td class="n">入：XLV <b>+3.51%</b>（MRNA <b>+176.97%</b> / MRK <b>+12.60%</b> / BNTX <b>+21.96%</b> / XBI <b>+5.90%</b> / LLY <b>+4.46%</b>）、XLY <b>+1.92%</b>、XLB <b>+1.43%</b>、XLP <b>+1.12%</b>、RSP <b>+1.04%</b>、IVE <b>+0.74%</b>、TSLA <b>+4.23%</b>、AMZN <b>+2.46%</b>、AAPL <b>+2.19%</b>、EL <b>+16.30%</b>、MRVL <b>+9.85%</b>、TGT <b>+4.28%</b>、LOW <b>+2.02%</b>、HD 残留 <b>+2.02%</b>。出：XLK <b>−1.07%</b>、SOXX <b>−2.21%</b>、SOX <b>−2.12%</b>、SMH <b>−1.55%</b>、AVGO <b>−4.61%</b>、TJX <b>−4.21%</b>、FN 残留 <b>−5.81%</b>、JPM <b>−1.65%</b>、XLF <b>−0.62%</b>、XLI <b>−0.88%</b>、NVDA <b>−0.99%</b>。</td></tr>
+<tr><td class="b lbl"><b>为什么</b></td><td class="n">08:30 财政部把 10s–30s 流动性回购上限 $2bn → <b>≥$4bn</b>（9 Sep–4 Nov）。长端先动：30Y <b>−9 bp</b>，10Y <b>−6 bp</b>，DXY 约 <b>−0.8%</b>。现金里等权 / 价值 / 医疗翻红；铲子（SMH / AVGO）继续漏。14:00 纪要 <b>9-3 已是已知</b>，没把 9 月加息从约 32–33% 抬上去（20:45 ET <b>30.6%</b>）。EIA +4.405 mb 没主导收盘。MRNA Phase 3 是医疗独立腿。</td></tr>
+<tr><td class="b lbl"><b>已计价</b></td><td class="n">9-3 / 三张加息反对票；30Y 离开 5.28–5.29 且未到 5.4%；TGT 超 + 上修、LOW 超但指引收到旧区间地板；MRNA 现金 +177%；回购宣布本身。Sep 加息晚间 <b>30.6%</b> / 按兵 <b>69.4%</b>（Investing.com CME，20:45 ET）。</td></tr>
+<tr><td class="b lbl"><b>证伪</b></td><td class="n">基准错＝周四现金跌出 Barchart DTE2 下沿（SPY <b>764.95</b> / QQQ <b>709.54</b> / SMH <b>550.85</b>）或 30Y 收回 ≥5.28。上行错＝SMH 不能守住 560 / 更不能收回 DTE2 上沿 <b>570.99</b>；或 WMT 系统性砸消费。</td></tr>
 </table>
 
 <h2>1. 市场状态</h2>
@@ -761,7 +768,7 @@ td,th{padding:7px 6px}
 
 <h3>6.5 日历</h3>
 <table>
-<tr><th>日</th><th>事件</th><th>官方时间 / 共识（有则写；冲突并列）</th><th>状态</th></tr>
+<tr><th>日</th><th>事件</th><th>官方时间 / 共识（有则写；冲突并列）</th><th class="lbl">状态</th></tr>
 <tr class="b"><td>周四 8/20</td><td><b>WMT</b> Q2 FY27（季末 7/31）</td><td>材料 ~06:00 CT（07:00 ET）；电话会 07:00 CT（08:00 ET），CEO Furner + CFO Rainey。公司 Q1 会指引：adj EPS <b>$0.72–$0.74</b>，净销售恒币 +4–5%，adj OI +7–10%。LSEG（SA）：<b>$0.74 / $186.8B</b>。Finance Calendar：街 EPS <b>$0.75</b>，公司营收指引 $186.94B。Pip Theory：$0.74 = 公司区间顶。IEEPA 退税 Pip 称约 $2.4B <b>不在指引里</b>。<b>不平均 0.74 vs 0.75</b></td><td>Walmart IR 8/13 与事件页。WMT 现金 8/19 <b>114.30 −0.78%</b>，量 34.15M</td></tr>
 <tr class="n"><td>周四 8/20</td><td>BABA / DE / AAP BMO；ROST AMC</td><td>周历。共识 n/a</td><td>周历</td></tr>
 <tr class="z"><td>周四 8/20 08:30</td><td><b>初请</b>（8/15 周）</td><td>前值 <b>209k</b>。Globe and Mail 估 <b>212k</b>。续请前值 1.777m（8/8 周）</td><td></td></tr>
@@ -777,7 +784,7 @@ td,th{padding:7px 6px}
 
 <h3>6.6 四问（操作面，对齐封面）</h3>
 <table>
-<tr><th>问</th><th>答</th></tr>
+<tr><th class="lbl">问</th><th>答</th></tr>
 <tr class="g"><td>什么提高上行概率</td><td>WMT 不砸、30Y 留在 5.19 下、SMH 收回 560.92 并向 570.99、Sep 加息保持 ~31%、NVDA 周不崩</td></tr>
 <tr class="r"><td>什么证明我们错</td><td>基准错在「新 DTE2 可守」——若周四现金跌出 764.95 / 709.54 / 550.85，或 30Y 收回 ≥5.28。上行错在「铲子能修」——若 SMH 守不住 560 / 更收不回 570.99</td></tr>
 <tr class="n"><td>什么已被计价</td><td>回购宣布本身；9-3 已知；TGT 超 + 上修、LOW 砍到地板仍被付钱；MRNA +177%；30Y 离开 5.28–5.29 且未到 5.4%；晚间 30.6/69.4</td></tr>
