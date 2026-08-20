@@ -9,6 +9,23 @@ html,body{margin:0;width:100%;background:#f8fafc;color:#111;font:18px/1.65 -appl
 .sitebar .back{margin-left:auto;color:#c7d2fe;font-weight:500}
 /* force old email tables to fill the page */
 table[width="100%"], table[width="680"], table[width="640"]{width:100% !important;max-width:1600px !important}
+
+/* data tables only — never nowrap the page wrapper cell */
+table table table{width:100% !important;table-layout:auto}
+table table table td, table table table th{
+  white-space:nowrap !important;
+  word-break:keep-all !important;
+  overflow-wrap:normal !important;
+  hyphens:none;
+}
+table table table td:last-child, table table table th:last-child{
+  white-space:normal !important;
+  overflow-wrap:break-word !important;
+}
+table table table:has(th:nth-child(4)) td:last-child,
+table table table:has(th:nth-child(4)) th:last-child,
+table table table:has(td:nth-child(4):last-child) td:last-child{max-width:30em}
+
 @media (max-width:800px){
 html,body{font-size:16px}
 .sitebar-inner{padding:10px 14px;font-size:14px}
