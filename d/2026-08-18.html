@@ -27,18 +27,24 @@ h3{font-size:18px;color:#0f172a;margin:16px 0 8px}
 .foot{color:#0f172a;font-size:14px;padding:14px 28px;background:#f8fafc}
 .cap{font-size:15px;color:#0f172a;margin:0 0 8px}
 .tiny{font-size:15px;color:#0f172a}
-table{border-collapse:collapse;width:100%;table-layout:auto}
-th{background:#eef2ff;color:#0f172a;padding:9px 8px;font-size:14px;text-align:left;vertical-align:bottom}
-td{padding:9px 8px;font-size:16px;border-bottom:1px solid #eef2ff;vertical-align:top;color:#0f172a}
-th,td{word-break:keep-all;overflow-wrap:normal;hyphens:none}
-th:not(:last-child),td:not(:last-child){white-space:nowrap;width:1%}
-th:first-child,td:first-child{white-space:nowrap;width:1%;font-variant-numeric:tabular-nums}
-th:last-child,td:last-child{white-space:normal;overflow-wrap:break-word;width:auto}
-table:has(th:nth-child(4)) th:last-child,
-table:has(th:nth-child(4)) td:last-child,
-table:has(td:nth-child(4):last-child) td:last-child{max-width:30em}
-@media (max-width:800px){
+.pad table{border-collapse:collapse;width:100%;table-layout:auto}
+.pad th{background:#eef2ff;color:#0f172a;padding:9px 10px;font-size:14px;text-align:left;vertical-align:bottom}
+.pad td{padding:9px 10px;font-size:16px;border-bottom:1px solid #eef2ff;vertical-align:top;color:#0f172a}
+.pad th,.pad td{word-break:keep-all;overflow-wrap:normal;hyphens:none}
+.pad th:first-child,.pad td:first-child,.pad .lbl{
+  white-space:nowrap !important;
+  width:auto;
+  min-width:max-content;
+  font-variant-numeric:tabular-nums;
 }
+.pad th:not(:last-child),.pad td:not(:last-child){
+  white-space:nowrap !important;
+  width:auto;
+  min-width:max-content;
+}
+.pad th:last-child,.pad td:last-child{white-space:normal;overflow-wrap:break-word;width:auto}
+.pad table:has(th:nth-child(4)) th:last-child,
+.pad table:has(th:nth-child(4)) td:last-child{max-width:32em}
 @media (max-width:800px){
 html,body{font-size:16px}
 .sitebar-inner{padding:10px 14px;font-size:14px;gap:8px}
@@ -46,7 +52,8 @@ html,body{font-size:16px}
 .hero{padding:16px 14px}
 .hero h1{font-size:22px}
 .pad,.foot{padding:8px 14px}
-td,th{padding:7px 6px}
+.pad td,.pad th{padding:7px 8px}
+.pad th:first-child,.pad td:first-child,.pad th:not(:last-child),.pad td:not(:last-child){white-space:nowrap !important;min-width:max-content}
 }
 </style>
 </head>
@@ -63,12 +70,12 @@ td,th{padding:7px 6px}
 <h2>0. 封面五问</h2>
 <p class="cap">收工对照。</p>
 <table>
-<tr><th>问</th><th>周二 20:00 ET 作答</th></tr>
-<tr><td class="b"><b>状态</b></td><td class="n">第三根阴线。SPX <b>7691.76 −0.69%</b>（Investing 印 7691.97，冲突并列）；QQQ <b>−1.69%</b>；SMH <b>−4.09%</b>。VIX <b>15.84</b> 仍低（高 16.09，没到 17）。30Y 盘中 <b>5.3371%</b>（2007 年来最高，来源冲突见利率表）收约 <b>5.28–5.29</b>。开盘≠最高（SPX O 7700.04 / H 7713.95）。</td></tr>
-<tr><td class="b"><b>钱流向哪</b></td><td class="n">入：能源 XLE <b>+1.76%</b>、医疗 XLV <b>+1.60%</b> / LLY <b>+3.60%</b>、必选 XLP <b>+1.06%</b>、AAPL <b>+1.45%</b>。出：SOX <b>−4.98%</b>、SMH <b>−4.09%</b>、SOXX <b>−4.96%</b>、XLK <b>−2.47%</b>、MU <b>−7.02%</b>、SNDK <b>−9.01%</b>、FN <b>−19.38%</b>、META <b>−4.45%</b>。等权 RSP −0.45% <b>强于</b> SPY −0.68%；价值 IVE +0.03% vs 成长 IVW −1.28%。</td></tr>
-<tr><td class="b"><b>为什么</b></td><td class="n">霍尔木兹 / 停火后特朗普称<b>无谈判</b> + 油续涨（Brent 结 91.02，高 92.00）+ 长端盘中新高。HD 超预期但住房冻结、只重申指引，没救消费（HD −0.12%，XLY −0.33%）。周一半导体独立叙事被拆掉——SMH 高 577.76 从未碰到 587.82。</td></tr>
-<tr><td class="b"><b>已计价</b></td><td class="n">HD 超预期且指引不变；VIX&lt;17（15.84）；30Y 未到 5.4%。FedWatch 晚间印 9 月加息 <b>33.3%</b> / 按兵 <b>66.7%</b>（冲突见政策表）。周一未编进的霍尔木兹全面升级仍未成为主定价。</td></tr>
-<tr><td class="b"><b>证伪</b></td><td class="n">基准错＝周三现金再跌出 Barchart DTE2 下沿（SPY <b>763.13</b> / QQQ <b>710.96</b> / SMH <b>558.62</b>）或 30Y 收 ≥5.4%。上行错＝SMH 不能守住当日高 <b>577.76</b> / 更不能收回 <b>587.82</b>。</td></tr>
+<tr><th class="lbl">问</th><th>周二 20:00 ET 作答</th></tr>
+<tr><td class="b lbl"><b>状态</b></td><td class="n">第三根阴线。SPX <b>7691.76 −0.69%</b>（Investing 印 7691.97，冲突并列）；QQQ <b>−1.69%</b>；SMH <b>−4.09%</b>。VIX <b>15.84</b> 仍低（高 16.09，没到 17）。30Y 盘中 <b>5.3371%</b>（2007 年来最高，来源冲突见利率表）收约 <b>5.28–5.29</b>。开盘≠最高（SPX O 7700.04 / H 7713.95）。</td></tr>
+<tr><td class="b lbl"><b>钱流向哪</b></td><td class="n">入：能源 XLE <b>+1.76%</b>、医疗 XLV <b>+1.60%</b> / LLY <b>+3.60%</b>、必选 XLP <b>+1.06%</b>、AAPL <b>+1.45%</b>。出：SOX <b>−4.98%</b>、SMH <b>−4.09%</b>、SOXX <b>−4.96%</b>、XLK <b>−2.47%</b>、MU <b>−7.02%</b>、SNDK <b>−9.01%</b>、FN <b>−19.38%</b>、META <b>−4.45%</b>。等权 RSP −0.45% <b>强于</b> SPY −0.68%；价值 IVE +0.03% vs 成长 IVW −1.28%。</td></tr>
+<tr><td class="b lbl"><b>为什么</b></td><td class="n">霍尔木兹 / 停火后特朗普称<b>无谈判</b> + 油续涨（Brent 结 91.02，高 92.00）+ 长端盘中新高。HD 超预期但住房冻结、只重申指引，没救消费（HD −0.12%，XLY −0.33%）。周一半导体独立叙事被拆掉——SMH 高 577.76 从未碰到 587.82。</td></tr>
+<tr><td class="b lbl"><b>已计价</b></td><td class="n">HD 超预期且指引不变；VIX&lt;17（15.84）；30Y 未到 5.4%。FedWatch 晚间印 9 月加息 <b>33.3%</b> / 按兵 <b>66.7%</b>（冲突见政策表）。周一未编进的霍尔木兹全面升级仍未成为主定价。</td></tr>
+<tr><td class="b lbl"><b>证伪</b></td><td class="n">基准错＝周三现金再跌出 Barchart DTE2 下沿（SPY <b>763.13</b> / QQQ <b>710.96</b> / SMH <b>558.62</b>）或 30Y 收 ≥5.4%。上行错＝SMH 不能守住当日高 <b>577.76</b> / 更不能收回 <b>587.82</b>。</td></tr>
 </table>
 
 <h2>1. 市场状态</h2>
@@ -605,7 +612,7 @@ td,th{padding:7px 6px}
 
 <h3>6.4 周三及已标出的日历</h3>
 <table>
-<tr><th>日</th><th>事件</th><th>官方时间 / 共识（有则写）</th><th>状态</th></tr>
+<tr><th>日</th><th>事件</th><th>官方时间 / 共识（有则写）</th><th class="lbl">状态</th></tr>
 <tr class="b"><td>周三 8/19</td><td><b>TGT</b> Q2 FY26</td><td>结果 <b>BMO</b>；网络直播 <b>08:00–09:00 ET</b>（07:00 CT）。次级：EPS ~$2.25–2.32（Sharemaestro $2.25；stockminded $2.26–2.32；shopappy ~$2.29 / ~$26.07bn / 同店 ~+3%）。<b>非 IR</b></td><td>Confirmed。corporate.target.com；PR Newswire 18 Aug</td></tr>
 <tr class="n"><td>周三 8/19</td><td><b>LOW</b> Q2 FY26 电话会</td><td><b>09:00 ET</b>；补充材料提前 15 分钟。发布通常随材料 ~08:45。次级：EPS ~$4.23–4.24 / 销售 ~$26.2bn（stockminded/shopappy）。<b>非 IR</b></td><td>Confirmed。corporate.lowes.com PR 12 Aug</td></tr>
 <tr class="z"><td>周三 8/19</td><td>TJX、EL、ADI</td><td>TradingKey 周历财报簇</td><td>未在发行人 IR 复核</td></tr>
@@ -629,7 +636,7 @@ td,th{padding:7px 6px}
 
 <h3>6.5 四问（操作面，对齐封面）</h3>
 <table>
-<tr><th>问</th><th>答</th></tr>
+<tr><th class="lbl">问</th><th>答</th></tr>
 <tr class="g"><td>什么提高上行概率</td><td>油回吐、30Y 离开高点、TGT/LOW 证明消费不是油的镜像、SMH 重新站上 577.76 并向 587.82、META 止跌</td></tr>
 <tr class="r"><td>什么证明我们错</td><td>基准错在「DTE2 可守」——若周三现金再跌出 763.13 / 710.96 / 558.62，或 30Y 收 ≥5.4%。上行错在「铲子能收复」——若 SMH 守不住 577.76 / 更收不回 587.82</td></tr>
 <tr class="n"><td>什么已被计价</td><td>HD 超预期且指引不变；VIX&lt;17；30Y 未到 5.4%；FedWatch 晚间 33.3/66.7 仍在周一 30–33/67–70 带内。霍尔木兹全面升级仍未成主定价</td></tr>
