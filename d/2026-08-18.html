@@ -71,7 +71,7 @@ td{font-size:15px}
 <tr><th>标的</th><th>开</th><th>高</th><th>低</th><th>收</th><th>vs 周一</th><th>量（SA history）</th><th>盘面</th></tr>
 <tr class="r"><td><b>SPY</b></td><td>768.70</td><td>769.50</td><td>766.92</td><td><b>767.45</b></td><td>−5.22 / <b>−0.68%</b><br>周一 772.67</td><td><b>42,437,600</b><br>vs 周一 34,356,577 = +23.5%<br>vs 自算 20D 46,526,685 = −8.8%</td><td>H−L 仅 2.58。高只碰到旧 DTE1 下沿 769.10。开已低于周一收。52w 629.28–779.37</td></tr>
 <tr class="r"><td><b>QQQ</b></td><td>720.21</td><td>722.13</td><td>715.92</td><td><b>717.51</b></td><td>−12.36 / <b>−1.69%</b><br>周一 729.87</td><td><b>47,969,809</b><br>vs 周一 25,903,878 = +85.2%<br>vs 自算 20D 39,591,441 = +21.2%</td><td>从开盘就卖。高 722.13 仍低于旧下沿 724.38。52w 555.60–748.65</td></tr>
-<tr class="r"><td><b>SMH</b></td><td>574.36</td><td>577.76</td><td>562.63</td><td><b>569.77</b></td><td>−24.30 / <b>−4.09%</b><br>周一 594.07</td><td><b>11,120,810</b><br>vs 周一 7,599,061 = +46.3%<br>vs 自算 20D 11,136,135 ≈ 平（−0.1%）</td><td>高 577.76 从未碰到 587.82。开 574.36 已低于约 05:00 预市 579.00。52w 281.15–671.83</td></tr>
+<tr class="r"><td><b>SMH</b></td><td>574.36</td><td>577.76</td><td>562.63</td><td><b>569.77</b></td><td>−24.30 / <b>−4.09%</b><br>周一 594.07</td><td><b>11,120,810</b><br>vs 周一 7,599,061 = +46.3%<br>vs 自算 20D 11,136,135 ≈ 平（−0.1%）</td><td>高 577.76 从未碰到 587.82。开 574.36 已低于约 05:00 预市 579.00。周一跳空背景：SpotGamma / ThinkOrSwim（CNBC 转）约 11:00 ET，PHLX 一笔 Nov-20 630 认沽 20,100 手、权利金约 $129M（上周五该合约 OI &lt;50）。52w 281.15–671.83</td></tr>
 </table>
 <p class="cap">三个都开在周一收下、收在开下。缺口是扩大的，不是消化完就拉回去那种。</p>
 
@@ -241,7 +241,7 @@ td{font-size:15px}
 <h3>2.3 有胶带的额外名字</h3>
 <table>
 <tr><th>代码</th><th>周一收</th><th>周二收</th><th>%</th><th>胶带</th></tr>
-<tr class="r"><td>MU</td><td>1011.75</td><td><b>940.76</b></td><td><b>−7.02%</b></td><td>O 957.10 / H 978.67 / L 926.64 / V 36.68M</td></tr>
+<tr class="r"><td>MU</td><td>1011.75</td><td><b>940.76</b></td><td><b>−7.02%</b></td><td>O 957.10 / H 978.67 / L 926.64 / V 36.68M。再失 1000（高 978.67 未回）。月线 / 前低 740 只作水平色，不是指令；本包未印月线值</td></tr>
 <tr class="r"><td>SNDK</td><td>n/a</td><td><b>1625.78</b></td><td><b>−9.01%</b></td><td>O 1677.54 / H 1724.99 / L 1600.20 / V 18.30M。TradingKey；exa vs 开盘</td></tr>
 <tr class="r"><td>AMAT</td><td>535.31</td><td><b>514.33</b></td><td><b>−3.92%</b></td><td>O 507.37 / H 516.83 / L 497.73 / V 8.53M。TECHi 15:23 $510.57 −4.62% 不是收盘</td></tr>
 <tr class="r"><td>MRVL</td><td>n/a</td><td>n/a</td><td><b>−7.82%</b></td><td>TradingKey；无 OHLC</td></tr>
@@ -251,8 +251,11 @@ td{font-size:15px}
 <tr class="r"><td>ARM</td><td>n/a</td><td>n/a</td><td><b>−6.67%</b></td><td>TradingKey</td></tr>
 <tr class="r"><td>KLAC</td><td>n/a</td><td>n/a</td><td><b>−5.33%</b></td><td>TradingKey</td></tr>
 <tr class="r"><td>FN</td><td>598.58</td><td><b>482.59</b></td><td><b>−19.38%</b></td><td>见 §4 梯子</td></tr>
-<tr class="r"><td>COHR</td><td>n/a</td><td>309.03</td><td><b>−12.0%</b></td><td>247wallst 16:10</td></tr>
+<tr class="r"><td>COHR</td><td>n/a</td><td>309.03</td><td><b>−12.0%</b></td><td>247wallst 16:10。另报 −12.75% 并列，不当收盘。年线精确值本包未核（来源打架），收 309 只记还没测到年线——水平色，不是指令</td></tr>
 <tr class="r"><td>AAOI</td><td>n/a</td><td>134.59</td><td><b>−13.1%</b></td><td>247wallst</td></tr>
+<tr class="r"><td>LITE</td><td>968.90</td><td><b>873.31</b></td><td><b>−9.87%</b></td><td>O 909.28 / H 943.76 / L 863.11 / V 5,946,437（SA hist）。Yahoo 量 6,012,800。光模块同伴，跟 COHR 同日杀</td></tr>
+<tr class="r"><td>CEG</td><td>278.20</td><td><b>266.83</b></td><td><b>−4.09%</b></td><td>O 275.75 / H 279.56 / L 264.82 / V 3,292,164（SA hist）。现金 vs 周一 278.20 = −4.09%；SA 印 −3.94% 用 adj 277.77（除息 8/18）。盘中低 264.82。XLU 全日只 −0.36%。催化见 §2.5 PJM/FERC</td></tr>
+<tr class="r"><td>VST</td><td>146.11</td><td><b>140.52</b></td><td><b>−3.83%</b></td><td>O 144.50 / H 145.54 / L 138.77 / V 4,279,618（SA hist）。跟 CEG 同日独立发电商腿。XLU 几乎平</td></tr>
 <tr class="r"><td>RDDT</td><td>164.50</td><td><b>158.25</b></td><td><b>−3.80%</b></td><td>O 166.10 / H 167.54 / L 157.45 / V 7.21M。纳入日回吐</td></tr>
 </table>
 
@@ -292,6 +295,8 @@ td{font-size:15px}
 <table>
 <tr><th>钟（ET）</th><th>打印</th><th>资产</th></tr>
 <tr class="n"><td>周一 8/17（背景）</td><td>6/17 起 60 日伊朗 MOU 到期。特朗普不延长：「他们不会做我觉得必要的那种交易」</td><td>油 / 30Y 已是周一主链</td></tr>
+<tr class="z"><td>周一 ~11:00 ET</td><td>SpotGamma / ThinkOrSwim（CNBC 转）：PHLX 一笔 SMH Nov-20 630 认沽 20,100 手，权利金约 $129M。上周五该合约 OI &lt;50，几乎肯定新开。对冲还是合成空未决</td><td>SMH 周二跳空。§5 未单列这一笔</td></tr>
+<tr class="n"><td>上四印发 → 周二定价</td><td>PJM 8/13 向 FERC 交 IRAS 框架：新大型负荷（含数据中心）未自带足够新容量时，电网吃紧先减这些负荷；登记项含备用发电。印发当日未见砸盘；周末投行/行业媒体拆完细则后，才和长端一起砸独立发电商</td><td>CEG −4.09% / VST −3.83%。XLU 收盘只 −0.36%</td></tr>
 <tr class="z"><td>开盘前</td><td>S&amp;P DJI：RDDT 替换 AVB 纳入标普，生效 8/18 开盘前。EQR 收购 AVB，合并后 Vivmark Residential（VMRK）留在指数。Sun Communities 进 MidCap 400。TheRealDeal：合并周一完成，VMRK 周二开盘交易。JPM 估约 16.7M 股 / ~$3bn 指数买入（cryptonomist 转引，非一手）</td><td>RDDT 周一冲高回落（开 177.51 / 高 178.33 / 收 164.50）。纳入日 −3.80% 至 158.25</td></tr>
 <tr class="r"><td>~BMO / 晨间 Truth Social</td><td>特朗普：「与伊朗伊斯兰共和国没有任何会谈、对话或已安排会谈。」「海军封锁仍全面有效。霍尔木兹海峡开放运行。水雷已清除或引爆。」另发图称霍尔木兹为「新美国领土」。CENTCOM 不确认排雷，让 CNBC 问白宫</td><td>原油即买后回（Newsquawk）。股指已在收益率上偏弱</td></tr>
 <tr class="n"><td>08:30</td><td>许可超、开工差、进口价 −0.4%、待售 −2.3%（待售 10:00）</td><td>数据；未见把指数尖刺绑到这组打印的来源</td></tr>
@@ -350,6 +355,8 @@ td{font-size:15px}
 <tr class="r"><td>半导体均值回归 / FN 消化</td><td>SMH −4.09%、SOX −4.98%、MU −7、SNDK −9、FN −19。周一阳线（SMH +1.06% / SOX +1.64%）被吐干。FN 周一 AMC 后现金消化</td><td>解释不了 XLE 独涨、30Y 盘中新高、HD 走平却带不动可选</td><td>叠加，铲子内部的主戏，不是指数收盘的第一因</td></tr>
 <tr class="n"><td>软件 / META 续抛</td><td>META −4.45% 续周一 −3.54%。可解释超大盘裂开</td><td>IGV 几乎平（−0.03%），软件不是今天的主杀。解释不了油和长端</td><td>叠加。META 自己的故事还在，但今天不是软件日</td></tr>
 <tr class="z"><td>HD / 消费失望</td><td>超预期不抬指引、住房冻结、XLY −0.33%</td><td>HD 自己只 −0.12%，弱于 SPY。解释不了 SOX −5%</td><td>被证伪当主因。消费没被救，也没被 HD 单日砸死</td></tr>
+<tr class="n"><td>CTA 极致空美债 / TLT 上涨尾部波动率被卖</td><td>长端盘中新高；收益率突然被定价；利率一回可能松风险资产。UBS：CTA 7 月下旬把债券低配翻了约三倍，10Y 每 1 bp 约 $3 亿盈亏（1990 年来最大敏感度）</td><td>解释不了油续涨、XLE 独涨、霍尔木兹现场</td><td>叠加，不是第一因。UBS 是次级。TLT 看涨尾部被卖本包未核一手微笑图</td></tr>
+<tr class="z"><td>VIX 期货周三到期 + 周五标准月权 / 波动率重定价</td><td>VIX 仍在 15 附近也能出第三根阴；资金可在重定价波动率，对着下周 NVDA（8/26 AH）和杰克逊霍尔（8/27–29）</td><td>解释不了 SOX −5%、油腿、XLE 独涨</td><td>叠加，不是第一因。不当覆盖霍尔木兹→油→长端主链</td></tr>
 </table>
 <div class="note"><b>置信度：中高。</b>主链（无谈判 / 霍尔木兹 → 油续涨 → 长端盘中新高 → 科技/铲子拖指数）有时间和跨资产。HD 当主因对不上 HD 自己的胶带。铲子回吐是真的，但是周一叙事被拆，不是新的第一因。</div>
 
@@ -595,9 +602,14 @@ td{font-size:15px}
 <tr class="n"><td>周三 8/19</td><td><b>LOW</b> Q2 FY26 电话会</td><td><b>09:00 ET</b>；补充材料提前 15 分钟。发布通常随材料 ~08:45。次级：EPS ~$4.23–4.24 / 销售 ~$26.2bn（stockminded/shopappy）。<b>非 IR</b></td><td>Confirmed。corporate.lowes.com PR 12 Aug</td></tr>
 <tr class="z"><td>周三 8/19</td><td>TJX、EL、ADI</td><td>TradingKey 周历财报簇</td><td>本包未在发行人 IR 复核。相对 HD/LOW/TGT 当<b>未核</b></td></tr>
 <tr class="b"><td>周三 8/19</td><td><b>FOMC 纪要</b>（7/28–29）</td><td><b>14:00 ET</b></td><td><b>官方确认</b>。federalreserve.gov/newsevents/2026-august.htm</td></tr>
+<tr class="n"><td>周三 8/19</td><td>VIX 期货到期（标准月度 VX）</td><td>常规结算周三；周二是最后交易日。不是纪要</td><td>周历。与 14:00 纪要同日，不当同一条因果</td></tr>
 <tr class="n"><td>周三 8/19</td><td>欧元区 HICP（7 月完整）</td><td>日期 <b>19 Aug 2026</b> Eurostat 确认。快报 7 月 2.9%（7/31）。<b>时钟冲突见下</b></td><td>日期确认；时间不唯一</td></tr>
 <tr class="z"><td>周四 8/20</td><td>WMT Q2。SUI 进 MidCap 400 替换 WBS</td><td>次级 NDTV：EPS $0.74，营收 $1869 亿（周一复盘残留，本包未重核）</td><td>周历</td></tr>
-<tr class="n"><td>周五 8/21</td><td>美 + 全球 8 月闪 PMI。8 月标准月权到期</td><td></td><td>周历</td></tr>
+<tr class="n"><td>周四 8/20</td><td>SpaceX / SPCX 锁定期再解禁约 <b>3.19 亿</b>股</td><td>Gate / TipRanks / Fool 印 319M（约 3.2 亿）。8/6 已解约约 9.12 亿。一手 cap table 未对发行人文件</td><td>周历。WMT 仍是周四主事件</td></tr>
+<tr class="z"><td>周一 8/17（已印）</td><td>RKLB 入选美军太空军 NITE-STAR</td><td>发行人 IR / GLOBE NEWSWIRE 8/17：IDIQ 上限 <b>$981M</b>，可竞标任务订单（天花板是项目总额，不是单给 RKLB 的已授金额）</td><td>已发生。本包无 RKLB OHLC</td></tr>
+<tr class="n"><td>周五 8/21</td><td>美 + 全球 8 月闪 PMI。8 月标准月权到期</td><td>与周三 VIX 期货到期分开。波动率重定价对着下周 NVDA + 杰克逊霍尔，不当周二收盘因</td><td>周历</td></tr>
+<tr class="z"><td>下周三 8/26</td><td>NVDA Q2 FY27</td><td>IR：约 13:20 PT 出数；电话会 <b>14:00 PT / 17:00 ET</b></td><td>Confirmed。nvidianews / investor.nvidia.com</td></tr>
+<tr class="n"><td>8/27–29</td><td>杰克逊霍尔经济政策研讨会</td><td>堪萨斯城联储官方 Aug 27–29。主题 Financial Innovation: Implications for Payments and Policy</td><td>官方确认。不当周二收盘因</td></tr>
 </table>
 <table>
 <tr><th>欧盟 HICP 时钟冲突（并列，不选）</th><th>戳</th></tr>
