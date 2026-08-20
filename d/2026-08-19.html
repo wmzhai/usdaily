@@ -28,29 +28,22 @@ h3{font-size:18px;color:#0f172a;margin:16px 0 8px}
 .foot{color:#0f172a;font-size:14px;padding:14px 28px;background:#f8fafc}
 .cap{font-size:15px;color:#0f172a;margin:0 0 8px}
 .tiny{font-size:15px;color:#0f172a}
-.pad table{border-collapse:collapse;width:100%;table-layout:auto}
+.pad table{border-collapse:collapse;width:100%}
 .pad th{background:#eef2ff;color:#0f172a;padding:9px 10px;font-size:14px;text-align:left;vertical-align:bottom}
 .pad td{padding:9px 10px;font-size:16px;border-bottom:1px solid #eef2ff;vertical-align:top;color:#0f172a}
 .pad th,.pad td{word-break:keep-all;overflow-wrap:normal;hyphens:none}
-.pad th:first-child,.pad td:first-child,.pad .lbl{
-  white-space:nowrap !important;
-  width:auto;
-  min-width:8em;
-  font-variant-numeric:tabular-nums;
-}
-.pad th:not(:last-child),.pad td:not(:last-child){
-  white-space:nowrap !important;
-  width:auto;
-  min-width:8em;
-}
-.pad th:last-child,.pad td:last-child{white-space:normal;overflow-wrap:break-word;width:auto}
-font-size:14px;gap:8px}
+.pad th:first-child,.pad td:first-child,.pad .lbl{white-space:nowrap !important;width:1%;min-width:8em}
+.pad th:not(:last-child),.pad td:not(:last-child){white-space:nowrap !important;width:1%}
+.pad th:last-child,.pad td:last-child{white-space:normal;overflow-wrap:break-word}
+@media (max-width: 800px) {
+html,body{font-size:16px}
+.sitebar-inner{padding:10px 14px;font-size:14px;gap:8px}
 .wrap{margin:0;border-left:0;border-right:0}
 .hero{padding:16px 14px}
 .hero h1{font-size:22px}
 .pad,.foot{padding:8px 14px}
 .pad td,.pad th{padding:7px 8px}
-.pad th:first-child,.pad td:first-child,.pad th:not(:last-child),.pad td:not(:last-child){white-space:nowrap !important;min-width:8em}
+.pad th:first-child,.pad td:first-child,.pad th:not(:last-child),.pad td:not(:last-child){white-space:nowrap !important}
 }
 </style>
 </head>
