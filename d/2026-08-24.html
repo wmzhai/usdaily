@@ -209,14 +209,22 @@ html,body{font-size:16px}
 </table>
 
 <h2>5. 期权 · 只看 SPY / QQQ / SMH</h2>
-<p class="cap">记分卡对的是周五写的 DTE3 盒子（762.85–768.59 / 708.88–718.00 / 552.80–568.04），Barchart 85% 跨式。周一收盘后的新 featured 行这趟没锁到，先空着，不拿旧 DTE 冒充。</p>
+<p class="cap">记分卡对的是周五写的 DTE3 盒子。Barchart 85% 跨式，交易值。周一收盘后 featured 滚到 DTE 2 = 周三 8/26，别跟过期的周一混。stockanalysis 和 Yahoo 收盘一致；开高低有冲突，不平均。</p>
 <table>
 <tr><th>ETF</th><th>收 / 高低</th><th>周五 DTE3</th><th>盒</th><th>路径</th></tr>
-<tr class="z"><td class="lbl">SPY</td><td>763.47 · 765.22 / 762.08</td><td>762.85–768.59</td><td>收盘 IN，低点 OUT</td><td>低点比下沿低 0.77。高低差 3.14，周五 ±2.87 几乎用满。收盘还在盒里。</td></tr>
-<tr class="r"><td class="lbl">QQQ</td><td>706.32 · 709.79 / 702.70</td><td>708.88–718.00</td><td>收盘和低点 OUT</td><td>高点刚摸下沿就砸。收盘比下沿低 2.56。高低差 7.09 &gt; ±4.56。</td></tr>
-<tr class="r"><td class="lbl">SMH</td><td>546.80 · 553.95 / 540.77</td><td>552.80–568.04</td><td>收盘和低点 OUT</td><td>开盘 553.55 还在盒里，随后刺穿。收盘比下沿低 6.00。高低差 13.18 &gt; ±7.62。</td></tr>
+<tr class="z"><td class="lbl">SPY</td><td>763.47 · 765.22 / 762.08</td><td>762.85–768.59</td><td>收盘 IN，全天 OUT</td><td>低开再砸。低点比下沿低 0.77。高低差 3.14 &gt; ±2.87，收盘到收盘 −2.25 仍在 ±2.87 里。最高 765.22 没回到周五收。</td></tr>
+<tr class="r"><td class="lbl">QQQ</td><td>706.32 · 709.79 / 702.70</td><td>708.88–718.00</td><td>收盘和全天 OUT</td><td>SA 开 709.66 / Yahoo 709.63，还在盒里，随后砸穿。高低差 7.09 和 −7.12 都大于 ±4.56。</td></tr>
+<tr class="r"><td class="lbl">SMH</td><td>546.80 · SA 554.18 / 540.75</td><td>552.80–568.04</td><td>收盘和全天 OUT</td><td>SA 开=高 554.18；Yahoo 553.55 / 553.95 / 540.77。开盘还在盒里，随后刺穿 552.80 和周五低 556.10。高低差 13.18–13.43 &gt; ±7.62。</td></tr>
 </table>
-<p>基准错印在 QQQ 和 SMH 上。SPY 只破了低点，收盘没出。周五那组最大痛点 8/24 768 / 716 / 575：三个收盘都在痛点下面。周一收盘后 IV / 新盒子 / GEX 这趟是空的。</p>
+<p>SPY 收盘没破 762.85，低点破了。QQQ、SMH 收盘都出了。铲子再漏印了。盘后 stockanalysis：SPY 763.65、QQQ 706.26、SMH 544.70（约 20:00）。</p>
+<h3>5.1 收盘后滚到周三（DTE 2）</h3>
+<table>
+<tr><th>ETF</th><th>IV</th><th>Barchart 85%</th><th>盒子</th><th>对照周五</th></tr>
+<tr><td class="lbl">SPY</td><td>12.93→13.23</td><td>±4.60</td><td>758.87–768.07</td><td>IV 回升。rank/pctl 往上。不是周二 DTE1。</td></tr>
+<tr><td class="lbl">QQQ</td><td>19.72→19.95</td><td>±6.59</td><td>699.73–712.91</td><td>同上。</td></tr>
+<tr><td class="lbl">SMH</td><td>37.10→37.25</td><td>±12.40</td><td>534.40–559.20</td><td>P/C 成交 3.72→1.72，还是偏认沽，没周五那么极端。</td></tr>
+</table>
+<p class="tiny">ChartExchange 最大痛点：过期的 8/24 变成 766 / 714 / 567.50；8/26 是 768 / 715 / 577.50；8/28 是 765 / 715 / 565。GEX / 25 日 RR / 周二 DTE1 表是空的。模型波动率盒子不是交易值，不当下一枪。</p>
 
 <h2>6. 情景、水平、日历</h2>
 <h3>6.1 三情景</h3>
