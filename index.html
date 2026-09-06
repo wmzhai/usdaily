@@ -13,6 +13,11 @@ html,body{margin:0;width:100%;background:#f8fafc;color:#0f172a;font:18px/1.65 -a
 h1{font-size:32px;margin:0 0 8px;line-height:1.25}
 .sub{color:#334155;margin:0 0 22px;font-size:17px}
 .latest{display:block;text-decoration:none;color:inherit;background:#fff;border:1px solid #0f172a;border-left:6px solid #0f172a;padding:20px 22px;margin:0 0 22px}
+.weekly{display:block;text-decoration:none;color:inherit;background:#eef2ff;border:1px solid #0f172a;border-left:6px solid #4338ca;padding:16px 22px;margin:0 0 22px}
+.weekly .k{font-size:14px;letter-spacing:.08em;color:#3730a3;font-weight:700}
+.weekly h2{margin:6px 0 8px;font-size:22px}
+.weekly p{margin:0;color:#334155;font-size:16px}
+h3.sec{font-size:18px;margin:8px 0 10px;color:#0f172a}
 .latest .k{font-size:14px;letter-spacing:.08em;color:#334155}
 .latest h2{margin:6px 0 8px;font-size:24px}
 .latest p{margin:0;color:#334155;font-size:16px}
@@ -39,12 +44,26 @@ html,body{font-size:16px}
 <div class="bar"><div class="bar-inner">USDAILY · 交易日 21:00 ET · 不是投资建议</div></div>
 <div class="wrap">
 <h1>美股盘后复盘</h1>
-<p class="sub">完整日报网页版。每天一篇，按日期打开。</p>
+<p class="sub">完整日报网页版。每天一篇；周日另有周报。按日期打开。</p>
 <a class="latest" href="d/2026-09-04.html">
   <div class="k">最新 · 2026-09-04 周五</div>
   <h2>非农162K把加息预期拽回来，三大小跌；存储飞、软件回吐，露露砸坑，特斯拉卖现实</h2>
   <p>SPX −0.38%，QQQ +0.18%，SMH +2.61%。LULU −17%。TSLA −6%。MU/SNDK 飞。打开全文。</p>
 </a>
+<a class="weekly" href="w/2026-09-06.html">
+  <div class="k">周报 · 2026-09-06 周日 · 交易周截止 9/4</div>
+  <h2>非农162K拽回加息定价，存储飞软件吐；戴尔雪花扛一周，露露砸坑</h2>
+  <p>CNBC 周线：标普约 +0.1%、纳约 +0.4%、道约 −0.3%。SMH 周约 +2.5%。NFP +162K，加息簇≈58–60%。打开全文。</p>
+</a>
+
+<h3 class="sec">周报 / Weekly</h3>
+<div class="scroll" style="margin-bottom:18px">
+<table>
+  <tr><th>日期</th><th>剧本</th><th></th></tr>
+  <tr><td><b>2026-09-06</b><br>周日周报</td><td>非农162K拽回加息定价，存储飞软件吐；戴尔雪花扛一周，露露砸坑</td><td><a href="w/2026-09-06.html">打开</a></td></tr>
+</table>
+</div>
+<h3 class="sec">日报存档 / Daily</h3>
 <div class="scroll">
 <table>
   <tr><th>日期</th><th>剧本</th><th></th></tr>
@@ -65,7 +84,7 @@ html,body{font-size:16px}
 </table>
 </div>
 <div class="note">只覆盖 SPY / QQQ / SMH 和万亿市值名字。数字有出处或标 n/a。不是荐股。</div>
-<p class="foot">源码在 <a href="https://github.com/wmzhai/usdaily">wmzhai/usdaily</a>。交易日盘后更新。</p>
+<p class="foot">源码在 <a href="https://github.com/wmzhai/usdaily">wmzhai/usdaily</a>。交易日盘后更新日报；周日更新周报。</p>
 </div>
 </body>
 </html>
